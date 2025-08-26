@@ -24,13 +24,13 @@ def load_data(file_path: str):
     - Removes leading/trailing whitespaces
     - Catches loading errors
     """
+
     if not file_path:
         print("Error: The path is invalid")
         return None
 
     if " " in file_path:
         file_path = file_path.strip()
-
 
     try:
         return pd.read_csv(file_path)
