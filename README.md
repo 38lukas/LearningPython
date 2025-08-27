@@ -4,6 +4,6 @@ This repository documents my daily learning journey with **Python** and essentia
 Goal: Step by step from the basics to building my own mini projects.
 
 ## Mini Projects:
-  **Temperature Converter:** Really simple programm that converts temperature
+  **Temperature Converter:** Really simple programm that converts temperature <br>
   **Titanic EDA**: Basic Exploratory Data Analysis, with visualisation about the Titanic data set
 
