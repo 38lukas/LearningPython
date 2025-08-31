@@ -1,9 +1,11 @@
 # Python Learning Journey
 
-This repository documents my daily learning journey with **Python** and essential libraries such as NumPy, Pandas, and Matplotlib.  
-Goal: Step by step from the basics to building my own mini projects.
+This repository documents my learning journey with **Python** and essential libraries such as NumPy, Pandas, and Matplotlib.  
 
-## Mini Projects:
-  **Temperature Converter:** Really simple programm that converts temperature <br>
-  **Titanic EDA**: Basic Exploratory Data Analysis, with visualisation about the Titanic data set
+## Projects:
 
+**GUI / OOP**
+- **Life Tracker**: Desktop To-Do app built with PyQt6 (MVC), CSV persistence, add/delete/toggle tasks, detail view.
+
+**EDA / DataScience**
+- **pass**:
