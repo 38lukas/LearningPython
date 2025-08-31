@@ -28,10 +28,21 @@ python app.py
 
 ## Project Structure
 ```bash
-app.py              # Main controller
-model.py            # Task model
-storage.py          # CSV persistence
-ui/main_window.py   # Window for task management
-ui/detail_window.py # Window for task detail
-data/tasks.csv      # Saved tasks
+life_tracker/
+│
+├── app.py                 # Startpunkt der App
+├── model.py               # Task-Datenmodell
+├── storage.py             # CSV-Persistenz
+│
+├── controller/            # Alle Controller
+│   ├── app_controller.py
+│   ├── main_window_controller.py
+│   └── detail_window_controller.py
+│
+├── ui/                    # Alle UI-Komponenten
+│   ├── main_window.py
+│   └── detail_window.py
+│
+└── data/
+    └── tasks.csv          # Gespeicherte Tasks
 ```
