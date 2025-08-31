@@ -1,9 +1,15 @@
 import csv
 from pathlib import Path
-from model import Task, task_to_dict, dict_to_task
 
-# Path to the CSV file storing tasks
-PATH = Path("../../data/tasks.csv")
+from src.life_tracker.model import Task, task_to_dict, dict_to_task
+
+# Path to data dir
+BASE_DIR = Path(__file__).resolve().parent.parent
+DATA_DIR = BASE_DIR / ".." / "data"
+DATA_DIR = DATA_DIR.resolve()
+
+# Path to tasks dir
+TASKS_PATH = DATA_DIR / "tasks.csv"
 
 def save_tasks(tasks: list[Task]):
     """
@@ -15,10 +21,10 @@ def save_tasks(tasks: list[Task]):
         tasks (list[Task]): List of tasks to save.
     """
     # Ensure the parent directory exists
-    PATH.parent.mkdir(parents=True, exist_ok=True)
+    TASKS_PATH.parent.mkdir(parents=True, exist_ok=True)
 
     # Write tasks to CSV
-    with open(PATH, "w", newline="", encoding="utf-8") as f:
+    with open(TASKS_PATH, "w", newline="", encoding="utf-8") as f:
         writer = csv.DictWriter(f, fieldnames=["title", "status"])
         writer.writeheader()
         for t in tasks:
@@ -31,9 +37,9 @@ def load_tasks() -> list[Task]:
     Returns:
         list[Task]: List of Task objects. Returns empty list if file doesn't exist.
     """
-    if not PATH.exists():
+    if not TASKS_PATH.exists():
         return []
 
-    with open(PATH, "r", newline="", encoding="utf-8") as f:
+    with open(TASKS_PATH, "r", newline="", encoding="utf-8") as f:
         reader = csv.DictReader(f)
         return [dict_to_task(row) for row in reader]

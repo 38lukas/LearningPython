@@ -1,40 +1,50 @@
-from PyQt6.QtWidgets import QWidget, QVBoxLayout, QLabel, QPushButton
-from storage import save_tasks
+from PyQt6.QtWidgets import QWidget, QVBoxLayout, QLabel, QPushButton, QSpacerItem, QHBoxLayout, QComboBox
+
 
 class DetailWindow(QWidget):
-    """Window to view a task and toggle its status."""
+    """Pure UI for viewing a task and toggling status."""
 
-    def __init__(self, controller):
-        """Initialize the window and its widgets."""
+    def __init__(self):
         super().__init__()
-        self.controller = controller
         self.current_task = None
 
         self.setWindowTitle("Task Detail")
         self.setGeometry(200, 200, 400, 400)
 
+        # Hauptlayout
         layout = QVBoxLayout()
         self.setLayout(layout)
 
-        self.label = QLabel()
-        self.toggle_button = QPushButton("Toggle Status")
-        layout.addWidget(self.label)
-        layout.addWidget(self.toggle_button)
+        # Task info VBox
+        self.info_layout = QVBoxLayout()
+        layout.addLayout(self.info_layout)
 
-        self.toggle_button.clicked.connect(self.toggle_status)
+        self.titel_label = QLabel()
+
+        self.status_layout = QHBoxLayout()
+        self.status_label = QLabel()
+        self.status_layout.addWidget(self.status_label)
+
+        self.info_layout.addWidget(self.titel_label)
+        self.info_layout.addLayout(self.status_layout)
+
+        self.status_menu = QComboBox()
+        self.status_menu.addItem("Pending")
+        self.status_menu.addItem("In Progress")
+        self.status_menu.addItem("Finished")
+
+        self.status_layout.addWidget(self.status_menu)
+
+        # Spacer
+        self.spacer = QSpacerItem(10, 200)
+        layout.addItem(self.spacer)
+
+        # Back
+        self.back_button = QPushButton("Back")
+        layout.addWidget(self.back_button)
 
     def set_task(self, task):
         """Display the given task."""
         self.current_task = task
-        self.label.setText(f"{task.title} (Status: {task.status})")
-
-    def toggle_status(self):
-        """Toggle the status of the current task and update main screen."""
-        if not self.current_task:
-            return
-
-        self.current_task.status = "done" if self.current_task.status == "pending" else "pending"
-        self.label.setText(f"{self.current_task.title} (Status: {self.current_task.status})")
-        self.controller.refresh_list()
-        save_tasks(self.controller.tasks)
-        self.controller.show_screen("Main")
+        self.titel_label.setText(f"Titel: {task.title}")
+        self.status_label.setText(f"Status: {task.status}")
