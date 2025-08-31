@@ -1,29 +1,49 @@
-from PyQt6.QtWidgets import QWidget, QVBoxLayout, QPushButton, QLineEdit, QListWidget
+from PyQt6.QtWidgets import QWidget, QVBoxLayout, QLineEdit, QPushButton, QListWidget, QListWidgetItem
+from PyQt6.QtCore import Qt
 
 class MainWindow(QWidget):
-    def __init__(self):
+    """Main window to display tasks and add/delete them."""
+
+    def __init__(self, controller):
+        """Initialize the main window and its widgets."""
         super().__init__()
-        self.setWindowTitle("Life Tracker – ToDo")
-        self.resize(400, 300)
+        self.controller = controller
+        self.setWindowTitle("Life Tracker")
+        self.setGeometry(200, 200, 400, 400)
 
-        # Widgets
-        self.input = QLineEdit()          # Eingabefeld für neue Aufgabe
-        self.add_button = QPushButton("Aufgabe hinzufügen")
-        self.list_widget = QListWidget()  # Liste für Aufgaben
-
-        # Layout
         layout = QVBoxLayout()
-        layout.addWidget(self.input)
-        layout.addWidget(self.add_button)
-        layout.addWidget(self.list_widget)
         self.setLayout(layout)
 
-        # Signals
-        self.add_button.clicked.connect(self.add_task)
+        # Input field for new tasks
+        self.task_entry = QLineEdit()
+        self.task_entry.setPlaceholderText("Enter new task")
+        layout.addWidget(self.task_entry)
 
-    def add_task(self):
-        """Neue Aufgabe hinzufügen"""
-        title = self.input.text()
-        if title:
-            self.list_widget.addItem(title)
-            self.input.clear()
+        # Add task button
+        self.add_button = QPushButton("Add Task")
+        layout.addWidget(self.add_button)
+
+        # Task list
+        self.task_list = QListWidget()
+        layout.addWidget(self.task_list)
+
+        # Delete task button
+        self.delete_button = QPushButton("Delete Selected Task")
+        layout.addWidget(self.delete_button)
+
+        # Connect events
+        self.add_button.clicked.connect(self.controller.add_task)
+        self.delete_button.clicked.connect(self.controller.delete_task)
+        self.task_entry.returnPressed.connect(self.controller.add_task)
+        self.task_list.itemDoubleClicked.connect(self.controller.open_detail_screen)
+
+    def add_list_item(self, text: str):
+        """Add a single item to the task list."""
+        if text:
+            item = QListWidgetItem(text)
+            item.setTextAlignment(Qt.AlignmentFlag.AlignLeft)
+            self.task_list.addItem(item)
+
+    def clear_task_list(self):
+        """Clear all items from the task list."""
+        self.task_list.clear()

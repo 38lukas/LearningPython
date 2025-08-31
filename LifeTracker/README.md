@@ -1,40 +1,37 @@
-# Life Tracker 
+# Life Tracker
 
-Ein einfaches **To-Do / Life-Tracking Tool** mit **Python + PyQt6**, um Aufgaben zu verwalten.  
-Dieses Projekt ist als Lernprojekt für **Python, OOP, GUI-Programmierung und Software-Architektur** entstanden.
+A **Python desktop app** built with **PyQt6** for managing tasks, 
+following the **MVC pattern**. Simple, clean, and extendable.
 
----
+## Features
 
-##  Features
+- Add, delete, and manage tasks  
+- Toggle task status (`pending` ↔ `done`) with a double-click  
+- Persistent storage in CSV  
+- Enter key support for quick task input  
+- Clean separation of **Model, View, Controller**  
 
-- Aufgaben anlegen, bearbeiten und löschen
-- Status verwalten: _offen_, _in Arbeit_, _erledigt_
-- Aufgabenliste speichern & laden (JSON-Datei in `data/tasks.json`)
-- GUI mit **PyQt6** (MainWindow, Buttons, Liste)
-- Saubere Architektur:
-  - `model.py` → Kernlogik (Task, TaskManager)
-  - `storage.py` → Laden/Speichern
-  - `ui/` → GUI-Komponenten (MainWindow, später Dialoge & Widgets)
-  - `app.py` → Einstiegspunkt
-  - `utils.py` → Hilfsfunktionen
+## Tech Stack
 
----
+- **Python 3.11+**  
+- **PyQt6** for GUI  
+- CSV for simple persistent storage  
 
-## Projektstruktur
+## Quick Start
 
-```text
-life-tracker/
-├─ README.md
-├─ requirements.txt
-├─ data/
-│  └─ tasks.json          # Aufgaben werden hier gespeichert (in .gitignore)
-├─ src/
-│  └─ life_tracker/
-│     ├─ __init__.py
-│     ├─ app.py           # Einstiegspunkt
-│     ├─ model.py         # Task + TaskManager
-│     ├─ storage.py       # JSON Speichern/Laden
-│     ├─ utils.py         # kleine Helfer
-│     └─ ui/
-│        └─ main_window.py # GUI (PyQt6 MainWindow)
-└─ tests/                 # (empfohlen) pytest Tests
+```bash
+git clone https://github.com/your-username/life-tracker.git
+cd life-tracker
+pip install PyQt6
+python app.py
+```
+
+## Project Structure
+```bash
+app.py              # Main controller
+model.py            # Task model
+storage.py          # CSV persistence
+ui/main_window.py   # Window for task management
+ui/detail_window.py # Window for task detail
+data/tasks.csv      # Saved tasks
+```
