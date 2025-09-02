@@ -2,8 +2,6 @@
 
 A small **task-tracking tool** built with PySide6 and QtCreator.
 
----
-
 ## Features
 - Tasks with **title, status, and description**
 - **Two screens**:
