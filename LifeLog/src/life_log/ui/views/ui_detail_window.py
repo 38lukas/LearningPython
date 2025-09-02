@@ -16,14 +16,14 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
 from PySide6.QtWidgets import (QApplication, QComboBox, QHBoxLayout, QLabel,
-    QPushButton, QSizePolicy, QSpacerItem, QVBoxLayout,
-    QWidget)
+    QPushButton, QSizePolicy, QSpacerItem, QTextEdit,
+    QVBoxLayout, QWidget)
 
 class Ui_DetailWindow(object):
     def setupUi(self, DetailWindow):
         if not DetailWindow.objectName():
             DetailWindow.setObjectName(u"DetailWindow")
-        DetailWindow.resize(400, 400)
+        DetailWindow.resize(800, 600)
         self.verticalLayout = QVBoxLayout(DetailWindow)
         self.verticalLayout.setObjectName(u"verticalLayout")
         self.info_layout = QVBoxLayout()
@@ -41,12 +41,26 @@ class Ui_DetailWindow(object):
         self.status_layout.addWidget(self.status_label)
 
         self.status_menu = QComboBox(DetailWindow)
+        self.status_menu.addItem("")
+        self.status_menu.addItem("")
+        self.status_menu.addItem("")
         self.status_menu.setObjectName(u"status_menu")
+        self.status_menu.setEditable(False)
 
         self.status_layout.addWidget(self.status_menu)
 
 
         self.info_layout.addLayout(self.status_layout)
+
+        self.description_label = QLabel(DetailWindow)
+        self.description_label.setObjectName(u"description_label")
+
+        self.info_layout.addWidget(self.description_label)
+
+        self.description_entry = QTextEdit(DetailWindow)
+        self.description_entry.setObjectName(u"description_entry")
+
+        self.info_layout.addWidget(self.description_entry)
 
 
         self.verticalLayout.addLayout(self.info_layout)
@@ -70,6 +84,12 @@ class Ui_DetailWindow(object):
         DetailWindow.setWindowTitle(QCoreApplication.translate("DetailWindow", u"Task Detail", None))
         self.titel_label.setText(QCoreApplication.translate("DetailWindow", u"Task Title", None))
         self.status_label.setText(QCoreApplication.translate("DetailWindow", u"Status:", None))
+        self.status_menu.setItemText(0, QCoreApplication.translate("DetailWindow", u"Pending", None))
+        self.status_menu.setItemText(1, QCoreApplication.translate("DetailWindow", u"Finished", None))
+        self.status_menu.setItemText(2, QCoreApplication.translate("DetailWindow", u"In Progress", None))
+
+        self.status_menu.setCurrentText(QCoreApplication.translate("DetailWindow", u"Pending", None))
+        self.description_label.setText(QCoreApplication.translate("DetailWindow", u"Description:", None))
         self.back_button.setText(QCoreApplication.translate("DetailWindow", u"Back", None))
     # retranslateUi
 

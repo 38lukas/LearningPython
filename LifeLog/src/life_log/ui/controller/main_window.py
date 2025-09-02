@@ -1,6 +1,6 @@
 from PySide6.QtGui import Qt
 from PySide6.QtWidgets import QMainWindow, QListWidgetItem
-from src.life_tracker.ui.views.ui_main_window import Ui_MainWindow
+from src.life_log.ui.views.ui_main_window import Ui_MainWindow
 
 
 class MainWindow(QMainWindow, Ui_MainWindow):

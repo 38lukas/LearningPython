@@ -1,10 +1,10 @@
 from PySide6.QtWidgets import QStackedWidget
-from src.life_tracker import Task
-from src.life_tracker import load_tasks
-from src.life_tracker import MainWindow
-from src.life_tracker import DetailWindow
-from src.life_tracker import MainWindowController
-from src.life_tracker import DetailWindowController
+from src.life_log import Task
+from src.life_log import load_tasks
+from src.life_log import MainWindow
+from src.life_log import DetailWindow
+from src.life_log import MainWindowController
+from src.life_log import DetailWindowController
 
 class ApplicationManager:
     def __init__(self):

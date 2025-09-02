@@ -1,5 +1,5 @@
-from src.life_tracker import Task
-from src.life_tracker import save_tasks
+from src.life_log import Task
+from src.life_log import save_tasks
 
 class MainWindowController:
     def __init__(self, app_controller, view):
