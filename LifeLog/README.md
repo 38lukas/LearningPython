@@ -2,6 +2,7 @@
 
 A small **task-tracking tool** built with PySide6 and QtCreator.
 
+
 ## Features
 - Tasks with **title, status, and description**
 - **Two screens**:
@@ -11,14 +12,12 @@ A small **task-tracking tool** built with PySide6 and QtCreator.
 - Automatic saving & loading of tasks (CSV file)
 - **Clean structure**: MVC (Model – View – Controller) + ApplicationManager
 
----
 
 ## Tech Stack
 
 - Python 3.11+
 - PySide6 (GUI framework)
 
----
 
 ## Project Structure
 ```text
@@ -43,5 +42,3 @@ src/
 ├── model.py                       # Task-Datenmodell
 └── storage.py                     # CSV-Speicherung
 ```
----
-
