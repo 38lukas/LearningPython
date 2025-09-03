@@ -1,5 +1,8 @@
 from PySide6.QtWidgets import QWidget
-from ..views.ui_detail_window import Ui_DetailWindow
+
+from src.life_log.ui.views.ui_detail_window import Ui_DetailWindow
+from src.life_log.constants import STATUS_COLOR
+
 
 class DetailWindow(QWidget, Ui_DetailWindow):
     def __init__(self):
@@ -10,7 +13,11 @@ class DetailWindow(QWidget, Ui_DetailWindow):
 
     def set_task(self, task):
         self.current_task = task
-        self.titel_label.setText(f"Titel: {task.title}")
-        self.status_label.setText(f"Status: {task.status}")
+        self.titel_label.setText(f"{task.title}")
+        self.titel_label.setStyleSheet("font-weight: bold")
+
+        self.status_label.setText(f"{task.status}")
+        self.status_label.setStyleSheet(f"color: {STATUS_COLOR.get(task.status, 'black')}; font-weight: bold;")
+
         self.description_entry.setText(f"{task.description}")
         self.status_menu.setCurrentText(task.status)

@@ -11,3 +11,4 @@ def task_to_dict(task: Task) -> dict:
 
 def dict_to_task(data: dict) -> Task:
     return Task(title=data["title"], status=data["status"], description=data["description"])
+

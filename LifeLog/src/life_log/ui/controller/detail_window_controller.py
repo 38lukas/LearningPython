@@ -15,8 +15,9 @@ class DetailWindowController:
         task = self.view.current_task
         if not task:
             return
+
         task.status = self.view.status_menu.currentText()
-        self.view.status_label.setText(f"Status: {task.status}")
+        self.view.set_task(task)
 
     def on_description_changed(self):
         task = self.view.current_task

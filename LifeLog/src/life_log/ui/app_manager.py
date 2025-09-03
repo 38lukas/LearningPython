@@ -7,7 +7,9 @@ from src.life_log import MainWindowController
 from src.life_log import DetailWindowController
 
 class ApplicationManager:
-    def __init__(self):
+    def __init__(self, app):
+        self.app = app
+
         self.tasks: list[Task] = load_tasks()
         self.current_task_index: int | None = None
 
@@ -36,7 +38,7 @@ class ApplicationManager:
     def refresh_list(self):
         self.main_window.clear_task_list()
         for task in self.tasks:
-            self.main_window.add_list_item(f"[{task.status}]  {task.title}")
+            self.main_window.add_list_item(task)
 
         # Optional info
         total = len(self.tasks)
