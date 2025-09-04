@@ -1,23 +1,54 @@
-# LifeLog – Simple Task Tracker
+# LifeLog
+![Python](https://img.shields.io/badge/Python-3.13-blue?logo=python)
+![License](https://img.shields.io/github/license/OWNER/REPO)
+![Build](https://img.shields.io/github/actions/workflow/status/OWNER/REPO/ci.yml?branch=main)
 
-A small **task-tracking tool** built with PySide6 and QtCreator.
+LifeLog is an app, which help you with task management, setting goals for yourself, and feeling like playing a game. 
 
+---
 
 ## Features
-- Tasks with **title, status, and description**
+- **Tasks**:
+  - create/delete tasks
+  - modify status, title, description
 - **Two screens**:
   - MainWindow → task list
   - DetailWindow → task detail & editing
-- Status dropdown (`Pending / In Progress / Finished`)
-- Automatic saving & loading of tasks (CSV file)
-- **Clean structure**: MVC (Model – View – Controller) + ApplicationManager
+- **Saving & Loading**:
+  - Automatic saving & loading of tasks (CSV file)
+- **Clean structure**:
+  - MVC (Model – View – Controller) + ApplicationManager
 
+---
 
 ## Tech Stack
 
-- Python 3.11+
+- Python 3.13
 - PySide6 (GUI framework)
+- Qt Designer
 
+---
+
+## Installation
+
+1. Repository klonen
+     ```bash
+     git clone https://github.com/DEIN_USERNAME/LifeLog.git
+     cd LifeLog
+     ```
+
+2. Abhängigkeiten installieren
+  pip install -r requirements.txt
+   ```bash
+    pip install -r requirements.txt
+   ```
+
+3. Anwendung starten
+   ```bash
+    python src/life_log/app.py
+   ```
+
+---
 
 ## Project Structure
 ```text
@@ -42,3 +73,13 @@ src/
 ├── model.py                       # Task-Datenmodell
 └── storage.py                     # CSV-Speicherung
 ```
+
+---
+
+## Contact
+
+**Lukas Stieneke** – Data Scientist & Developer
+
+- 📧 Email: lukas.stieneke@gmail.com
+- 🐙 GitHub: [38lukas](https://github.com/38lukas)
+- 💼 LinkedIn: [LinkedInName](https://linkedin.com/in/LinkedInName)
