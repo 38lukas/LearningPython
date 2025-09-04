@@ -37,7 +37,7 @@ class MainWindowController:
         if 0 <= row < len(self.app_manager.tasks):
             self.app_manager.current_task_index = row
             task = self.app_manager.tasks[row]
-            self.app_manager.detail_window.set_task(task)
+            self.app_manager.detail_controller.set_task(task)
             self.app_manager.show_screen("Detail")
 
     def on_exit_button_pressed(self):

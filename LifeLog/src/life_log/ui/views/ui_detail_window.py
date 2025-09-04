@@ -30,20 +30,31 @@ class Ui_DetailWindow(object):
         self.info_layout.setObjectName(u"info_layout")
         self.horizontalLayout = QHBoxLayout()
         self.horizontalLayout.setObjectName(u"horizontalLayout")
-        self.titel_titel = QLabel(DetailWindow)
-        self.titel_titel.setObjectName(u"titel_titel")
+        self.title_titel = QLabel(DetailWindow)
+        self.title_titel.setObjectName(u"title_titel")
 
-        self.horizontalLayout.addWidget(self.titel_titel)
+        self.horizontalLayout.addWidget(self.title_titel)
 
-        self.titel_label = QLabel(DetailWindow)
-        self.titel_label.setObjectName(u"titel_label")
-        self.titel_label.setMinimumSize(QSize(0, 0))
+        self.title_label = QLabel(DetailWindow)
+        self.title_label.setObjectName(u"title_label")
+        self.title_label.setMinimumSize(QSize(0, 0))
 
-        self.horizontalLayout.addWidget(self.titel_label)
+        self.horizontalLayout.addWidget(self.title_label)
 
-        self.titel_spacer = QSpacerItem(24, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
+        self.title_spacer = QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
 
-        self.horizontalLayout.addItem(self.titel_spacer)
+        self.horizontalLayout.addItem(self.title_spacer)
+
+        self.title_entry = QTextEdit(DetailWindow)
+        self.title_entry.setObjectName(u"title_entry")
+        self.title_entry.setMaximumSize(QSize(100, 26))
+
+        self.horizontalLayout.addWidget(self.title_entry)
+
+        self.title_apply_button = QPushButton(DetailWindow)
+        self.title_apply_button.setObjectName(u"title_apply_button")
+
+        self.horizontalLayout.addWidget(self.title_apply_button)
 
 
         self.info_layout.addLayout(self.horizontalLayout)
@@ -61,6 +72,10 @@ class Ui_DetailWindow(object):
 
         self.status_layout.addWidget(self.status_label)
 
+        self.status_spacer = QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
+
+        self.status_layout.addItem(self.status_spacer)
+
         self.status_menu = QComboBox(DetailWindow)
         self.status_menu.addItem("")
         self.status_menu.addItem("")
@@ -70,22 +85,28 @@ class Ui_DetailWindow(object):
 
         self.status_layout.addWidget(self.status_menu)
 
-        self.horizontalSpacer = QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
-
-        self.status_layout.addItem(self.horizontalSpacer)
-
 
         self.info_layout.addLayout(self.status_layout)
 
+        self.description_layout = QHBoxLayout()
+        self.description_layout.setObjectName(u"description_layout")
         self.description_label = QLabel(DetailWindow)
         self.description_label.setObjectName(u"description_label")
 
-        self.info_layout.addWidget(self.description_label)
+        self.description_layout.addWidget(self.description_label)
+
+        self.description_spacer = QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
+
+        self.description_layout.addItem(self.description_spacer)
 
         self.description_entry = QTextEdit(DetailWindow)
         self.description_entry.setObjectName(u"description_entry")
+        self.description_entry.setMaximumSize(QSize(16777215, 50))
 
-        self.info_layout.addWidget(self.description_entry)
+        self.description_layout.addWidget(self.description_entry)
+
+
+        self.info_layout.addLayout(self.description_layout)
 
 
         self.verticalLayout.addLayout(self.info_layout)
@@ -107,8 +128,9 @@ class Ui_DetailWindow(object):
 
     def retranslateUi(self, DetailWindow):
         DetailWindow.setWindowTitle(QCoreApplication.translate("DetailWindow", u"Task Detail", None))
-        self.titel_titel.setText(QCoreApplication.translate("DetailWindow", u"Titel:", None))
-        self.titel_label.setText(QCoreApplication.translate("DetailWindow", u"Task Title", None))
+        self.title_titel.setText(QCoreApplication.translate("DetailWindow", u"Titel:", None))
+        self.title_label.setText(QCoreApplication.translate("DetailWindow", u"Task Title", None))
+        self.title_apply_button.setText(QCoreApplication.translate("DetailWindow", u"Change", None))
         self.status_title.setText(QCoreApplication.translate("DetailWindow", u"Status:", None))
         self.status_label.setText(QCoreApplication.translate("DetailWindow", u"Pending", None))
         self.status_menu.setItemText(0, QCoreApplication.translate("DetailWindow", u"Pending", None))

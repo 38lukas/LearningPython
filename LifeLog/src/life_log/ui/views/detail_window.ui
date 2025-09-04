@@ -19,14 +19,14 @@
      <item>
       <layout class="QHBoxLayout" name="horizontalLayout">
        <item>
-        <widget class="QLabel" name="titel_titel">
+        <widget class="QLabel" name="title_titel">
          <property name="text">
           <string>Titel:</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QLabel" name="titel_label">
+        <widget class="QLabel" name="title_label">
          <property name="minimumSize">
           <size>
            <width>0</width>
@@ -39,17 +39,34 @@
         </widget>
        </item>
        <item>
-        <spacer name="titel_spacer">
+        <spacer name="title_spacer">
          <property name="orientation">
           <enum>Qt::Orientation::Horizontal</enum>
          </property>
          <property name="sizeHint" stdset="0">
           <size>
-           <width>24</width>
+           <width>40</width>
            <height>20</height>
           </size>
          </property>
         </spacer>
+       </item>
+       <item>
+        <widget class="QTextEdit" name="title_entry">
+         <property name="maximumSize">
+          <size>
+           <width>100</width>
+           <height>26</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="title_apply_button">
+         <property name="text">
+          <string>Change</string>
+         </property>
+        </widget>
        </item>
       </layout>
      </item>
@@ -76,6 +93,19 @@
         </widget>
        </item>
        <item>
+        <spacer name="status_spacer">
+         <property name="orientation">
+          <enum>Qt::Orientation::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
         <widget class="QComboBox" name="status_menu">
          <property name="editable">
           <bool>false</bool>
@@ -100,8 +130,19 @@
          </item>
         </widget>
        </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="description_layout">
        <item>
-        <spacer name="horizontalSpacer">
+        <widget class="QLabel" name="description_label">
+         <property name="text">
+          <string>Description:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="description_spacer">
          <property name="orientation">
           <enum>Qt::Orientation::Horizontal</enum>
          </property>
@@ -113,17 +154,17 @@
          </property>
         </spacer>
        </item>
+       <item>
+        <widget class="QTextEdit" name="description_entry">
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>50</height>
+          </size>
+         </property>
+        </widget>
+       </item>
       </layout>
-     </item>
-     <item>
-      <widget class="QLabel" name="description_label">
-       <property name="text">
-        <string>Description:</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QTextEdit" name="description_entry"/>
      </item>
     </layout>
    </item>

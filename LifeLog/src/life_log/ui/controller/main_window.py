@@ -18,11 +18,14 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         item = QListWidgetItem()
         widget = QWidget()
         layout = QHBoxLayout()
+        layout.setContentsMargins(5, 2, 5, 2)
+        layout.setSpacing(10)
         widget.setLayout(layout)
 
         # Setting up Labels
         status_label = QLabel(f"{task.status}")
         status_label.setStyleSheet(f"color: {STATUS_COLOR.get(task.status, 'black')}; font-weight: bold;")
+        status_label.setFixedWidth(100)
         title_label = QLabel(task.title)
         layout.addWidget(status_label)
         layout.addWidget(title_label)
@@ -31,6 +34,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.task_list.addItem(item)
         self.task_list.setItemWidget(item, widget)
         item.setSizeHint(widget.sizeHint())
+        item.setToolTip(task.description)
 
     def clear_task_list(self):
         self.task_list.clear()

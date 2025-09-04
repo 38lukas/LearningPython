@@ -1,23 +1,29 @@
 from PySide6.QtWidgets import QWidget
 
 from src.life_log.ui.views.ui_detail_window import Ui_DetailWindow
-from src.life_log.constants import STATUS_COLOR
 
 
 class DetailWindow(QWidget, Ui_DetailWindow):
     def __init__(self):
         super().__init__()
-        self.current_task = None
         self.setupUi(self)
 
+    def set_title(self, title):
+        self.title_label.setText(title)
+        self.title_label.setStyleSheet("font-weight: bold")
 
-    def set_task(self, task):
-        self.current_task = task
-        self.titel_label.setText(f"{task.title}")
-        self.titel_label.setStyleSheet("font-weight: bold")
+    def set_status(self, status, color):
+        self.status_label.setText(status)
+        self.status_label.setStyleSheet(f"color: {color}; font-weight: bold;")
 
-        self.status_label.setText(f"{task.status}")
-        self.status_label.setStyleSheet(f"color: {STATUS_COLOR.get(task.status, 'black')}; font-weight: bold;")
+    def set_description(self, description):
+        self.description_entry.setText(description)
 
-        self.description_entry.setText(f"{task.description}")
-        self.status_menu.setCurrentText(task.status)
+    def get_title_text(self):
+        return self.title_entry.toPlainText()
+
+    def get_description_text(self):
+        return self.description_entry.toPlainText()
+
+    def get_status_text(self):
+        return self.status_menu.currentText()
