@@ -1,6 +1,6 @@
 # LifeLog
 ![Python](https://img.shields.io/badge/Python-3.13-blue?logo=python)
-![License](https://img.shields.io/github/license/OWNER/REPO)
+![License](https://img.shields.io/badge/license-MIT-green)
 ![Build](https://img.shields.io/github/actions/workflow/status/OWNER/REPO/ci.yml?branch=main)
 
 LifeLog is an app, which help you with task management, setting goals for yourself, and feeling like playing a game. 
