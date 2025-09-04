@@ -1,12 +1,37 @@
 # Python Learning Journey
 
-This repository documents my learning journey with **Python** and essential libraries such as NumPy, Pandas, and Matplotlib.  
+This repository documents my journey of learning **Python** and essential libraries such as NumPy, Pandas, and Matplotlib.  
+The projects are listed below.  
 
-## Projects:
+*-> Feel free to read more about each project in its own project README.md*
 
-**GUI / OOP**
-- **Life Tracker**: Desktop To-Do app built with PyQt6 (MVC), CSV persistence, add/delete/toggle tasks, detail view.
+---
 
-**EDA / DataScience**
-- **pass**:
+# Projects
 
+## LifeLog (GUI/OOP)
+A desktop To-Do app built with **PySide6** and **Qt Designer**.  
+It uses CSV-based persistence and comes with various productivity features.  
+
+**Technologies:**
+- Python 3.13  
+- PySide6 / PyQt6  
+- Qt Designer
+
+
+## Game Reviews EDA
+Comprehensive Exploratory Data Analysis of a **Game Reviews dataset** in Jupyter Notebook.  
+The project includes thorough documentation, visualizations of key categories, and investigates relationships between attributes by addressing specific analytical questions.  
+
+**Technologies:**
+- Python 3.13  
+- NumPy, Pandas, Matplotlib, Seaborn  
+- Jupyter Notebooks  
+
+---
+
+# Contact
+**Lukas Stieneke** – Data Scientist & Developer  
+
+- 📧 Email: lukas.stieneke@gmail.com  
+- 🐙 GitHub: [38lukas](https://github.com/38lukas)  
