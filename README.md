@@ -1,4 +1,7 @@
 # Python Learning Journey
+![Python](https://img.shields.io/badge/Python-3.13-blue?logo=python)
+![License](https://img.shields.io/badge/license-MIT-green)
+![Status](https://img.shields.io/badge/status-learning-orange)
 
 This repository documents my journey of learning **Python** and essential libraries such as NumPy, Pandas, and Matplotlib.  
 The projects are listed below.  
