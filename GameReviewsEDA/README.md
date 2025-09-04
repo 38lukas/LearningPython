@@ -34,7 +34,7 @@ No installation required. Simply open the notebooks:
 
 ```bash
 notebooks/01_exploration.ipynb
-
+```
 ---
 
 ## Contact
