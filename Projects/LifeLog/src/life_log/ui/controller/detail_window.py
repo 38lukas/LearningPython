@@ -29,5 +29,5 @@ class DetailWindow(QWidget, Ui_DetailWindow):
         return self.status_menu.currentText()
 
     def set_due_date(self, date):
-        self.date_edit.setDateTime(date)
+        self.date_edit.setDate(date)
 

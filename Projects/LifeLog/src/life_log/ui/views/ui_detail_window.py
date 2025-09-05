@@ -15,9 +15,9 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QFont, QFontDatabase, QGradient, QIcon,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
-from PySide6.QtWidgets import (QApplication, QComboBox, QHBoxLayout, QLabel,
-    QPushButton, QSizePolicy, QSpacerItem, QTextEdit,
-    QVBoxLayout, QWidget)
+from PySide6.QtWidgets import (QApplication, QComboBox, QDateTimeEdit, QHBoxLayout,
+    QLabel, QPushButton, QSizePolicy, QSpacerItem,
+    QTextEdit, QVBoxLayout, QWidget)
 
 class Ui_DetailWindow(object):
     def setupUi(self, DetailWindow):
@@ -28,36 +28,36 @@ class Ui_DetailWindow(object):
         self.verticalLayout.setObjectName(u"verticalLayout")
         self.info_layout = QVBoxLayout()
         self.info_layout.setObjectName(u"info_layout")
-        self.horizontalLayout = QHBoxLayout()
-        self.horizontalLayout.setObjectName(u"horizontalLayout")
+        self.title_layout = QHBoxLayout()
+        self.title_layout.setObjectName(u"title_layout")
         self.title_titel = QLabel(DetailWindow)
         self.title_titel.setObjectName(u"title_titel")
 
-        self.horizontalLayout.addWidget(self.title_titel)
+        self.title_layout.addWidget(self.title_titel)
 
         self.title_label = QLabel(DetailWindow)
         self.title_label.setObjectName(u"title_label")
         self.title_label.setMinimumSize(QSize(0, 0))
 
-        self.horizontalLayout.addWidget(self.title_label)
+        self.title_layout.addWidget(self.title_label)
 
         self.title_spacer = QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
 
-        self.horizontalLayout.addItem(self.title_spacer)
+        self.title_layout.addItem(self.title_spacer)
 
         self.title_entry = QTextEdit(DetailWindow)
         self.title_entry.setObjectName(u"title_entry")
         self.title_entry.setMaximumSize(QSize(100, 26))
 
-        self.horizontalLayout.addWidget(self.title_entry)
+        self.title_layout.addWidget(self.title_entry)
 
         self.title_apply_button = QPushButton(DetailWindow)
         self.title_apply_button.setObjectName(u"title_apply_button")
 
-        self.horizontalLayout.addWidget(self.title_apply_button)
+        self.title_layout.addWidget(self.title_apply_button)
 
 
-        self.info_layout.addLayout(self.horizontalLayout)
+        self.info_layout.addLayout(self.title_layout)
 
         self.status_layout = QHBoxLayout()
         self.status_layout.setObjectName(u"status_layout")
@@ -87,6 +87,21 @@ class Ui_DetailWindow(object):
 
 
         self.info_layout.addLayout(self.status_layout)
+
+        self.due_date_layout = QHBoxLayout()
+        self.due_date_layout.setObjectName(u"due_date_layout")
+        self.date_label = QLabel(DetailWindow)
+        self.date_label.setObjectName(u"date_label")
+
+        self.due_date_layout.addWidget(self.date_label)
+
+        self.date_edit = QDateTimeEdit(DetailWindow)
+        self.date_edit.setObjectName(u"date_edit")
+
+        self.due_date_layout.addWidget(self.date_edit)
+
+
+        self.info_layout.addLayout(self.due_date_layout)
 
         self.description_layout = QHBoxLayout()
         self.description_layout.setObjectName(u"description_layout")
@@ -138,6 +153,8 @@ class Ui_DetailWindow(object):
         self.status_menu.setItemText(2, QCoreApplication.translate("DetailWindow", u"In Progress", None))
 
         self.status_menu.setCurrentText(QCoreApplication.translate("DetailWindow", u"Pending", None))
+        self.date_label.setText(QCoreApplication.translate("DetailWindow", u"Due Date:", None))
+        self.date_edit.setDisplayFormat(QCoreApplication.translate("DetailWindow", u"dd.MM.yyyy", None))
         self.description_label.setText(QCoreApplication.translate("DetailWindow", u"Description:", None))
         self.back_button.setText(QCoreApplication.translate("DetailWindow", u"Back", None))
     # retranslateUi

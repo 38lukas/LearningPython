@@ -1,5 +1,6 @@
 from src.life_log import save_tasks
 from src.life_log.constants import STATUS_COLOR
+from datetime import date
 
 
 class DetailWindowController:
@@ -12,7 +13,7 @@ class DetailWindowController:
         self.view.back_button.clicked.connect(self.on_back_clicked)
         self.view.description_entry.textChanged.connect(self.on_description_changed)
         self.view.title_apply_button.pressed.connect(self.on_title_apply_pressed)
-        self.view.date_edit.date_changed.connect(self.on_due_date_changed)
+        self.view.date_edit.dateChanged.connect(self.on_due_date_changed)
 
     def set_task(self, task):
         self.current_task = task
@@ -44,5 +45,5 @@ class DetailWindowController:
         save_tasks(self.app_manager.tasks)
         self.app_manager.show_screen("Main")
 
-    def on_due_date_changed(self, date):
-        self.current_task.due_date = date.toString("yyyy.mm.dd")
+    def on_due_date_changed(self, qdate):
+        self.current_task.due_date = date(qdate.year(), qdate.month(), qdate.day())
