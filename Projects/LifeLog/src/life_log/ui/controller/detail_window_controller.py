@@ -12,12 +12,14 @@ class DetailWindowController:
         self.view.back_button.clicked.connect(self.on_back_clicked)
         self.view.description_entry.textChanged.connect(self.on_description_changed)
         self.view.title_apply_button.pressed.connect(self.on_title_apply_pressed)
+        self.view.date_edit.date_changed.connect(self.on_due_date_changed)
 
     def set_task(self, task):
         self.current_task = task
         self.view.set_title(task.title)
         self.view.set_status(task.status, STATUS_COLOR.get(task.status, "black"))
         self.view.set_description(task.description)
+        self.view.set_due_date(task.due_date)
 
     def on_status_changed(self):
         if not self.current_task:
@@ -41,3 +43,6 @@ class DetailWindowController:
         self.app_manager.refresh_list()
         save_tasks(self.app_manager.tasks)
         self.app_manager.show_screen("Main")
+
+    def on_due_date_changed(self, date):
+        self.current_task.due_date = date.toString("yyyy.mm.dd")

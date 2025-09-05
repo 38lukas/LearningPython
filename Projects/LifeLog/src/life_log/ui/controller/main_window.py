@@ -27,8 +27,12 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         status_label.setStyleSheet(f"color: {STATUS_COLOR.get(task.status, 'black')}; font-weight: bold;")
         status_label.setFixedWidth(100)
         title_label = QLabel(task.title)
+        due_date_label = QLabel(task.due_date.strftime('%Y-%m-%d'))
+
+
         layout.addWidget(status_label)
         layout.addWidget(title_label)
+        layout.addWidget(due_date_label)
 
         # Adding to the List
         self.task_list.addItem(item)

@@ -17,7 +17,7 @@
    <item>
     <layout class="QVBoxLayout" name="info_layout">
      <item>
-      <layout class="QHBoxLayout" name="horizontalLayout">
+      <layout class="QHBoxLayout" name="title_layout">
        <item>
         <widget class="QLabel" name="title_titel">
          <property name="text">
@@ -128,6 +128,24 @@
            <string>In Progress</string>
           </property>
          </item>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="due_date_layout">
+       <item>
+        <widget class="QLabel" name="date_label">
+         <property name="text">
+          <string>Due Date:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QDateTimeEdit" name="date_edit">
+         <property name="displayFormat">
+          <string>dd.MM.yyyy</string>
+         </property>
         </widget>
        </item>
       </layout>

@@ -19,7 +19,7 @@ class MainWindowController:
         title = self.view.task_entry.text().strip()
         if not title:
             return
-        task = Task(title=title, status="Pending")
+        task = Task(title=title)
         self.app_manager.tasks.append(task)
         self.view.task_entry.clear()
         self.app_manager.refresh_list()
