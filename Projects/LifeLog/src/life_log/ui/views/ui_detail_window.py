@@ -23,9 +23,18 @@ class Ui_DetailWindow(object):
     def setupUi(self, DetailWindow):
         if not DetailWindow.objectName():
             DetailWindow.setObjectName(u"DetailWindow")
-        DetailWindow.resize(400, 400)
+        DetailWindow.resize(448, 326)
         self.verticalLayout = QVBoxLayout(DetailWindow)
         self.verticalLayout.setObjectName(u"verticalLayout")
+        self.label = QLabel(DetailWindow)
+        self.label.setObjectName(u"label")
+        font = QFont()
+        font.setBold(True)
+        self.label.setFont(font)
+        self.label.setAlignment(Qt.AlignmentFlag.AlignCenter)
+
+        self.verticalLayout.addWidget(self.label)
+
         self.info_layout = QVBoxLayout()
         self.info_layout.setObjectName(u"info_layout")
         self.title_layout = QHBoxLayout()
@@ -47,6 +56,7 @@ class Ui_DetailWindow(object):
 
         self.title_entry = QTextEdit(DetailWindow)
         self.title_entry.setObjectName(u"title_entry")
+        self.title_entry.setMinimumSize(QSize(175, 0))
         self.title_entry.setMaximumSize(QSize(100, 26))
 
         self.title_layout.addWidget(self.title_entry)
@@ -130,10 +140,28 @@ class Ui_DetailWindow(object):
 
         self.verticalLayout.addItem(self.verticalSpacer)
 
+        self.button_layout = QHBoxLayout()
+        self.button_layout.setObjectName(u"button_layout")
+        self.horizontalSpacer = QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
+
+        self.button_layout.addItem(self.horizontalSpacer)
+
         self.back_button = QPushButton(DetailWindow)
         self.back_button.setObjectName(u"back_button")
 
-        self.verticalLayout.addWidget(self.back_button)
+        self.button_layout.addWidget(self.back_button)
+
+        self.save_button = QPushButton(DetailWindow)
+        self.save_button.setObjectName(u"save_button")
+
+        self.button_layout.addWidget(self.save_button)
+
+        self.horizontalSpacer_2 = QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
+
+        self.button_layout.addItem(self.horizontalSpacer_2)
+
+
+        self.verticalLayout.addLayout(self.button_layout)
 
 
         self.retranslateUi(DetailWindow)
@@ -143,6 +171,7 @@ class Ui_DetailWindow(object):
 
     def retranslateUi(self, DetailWindow):
         DetailWindow.setWindowTitle(QCoreApplication.translate("DetailWindow", u"Task Detail", None))
+        self.label.setText(QCoreApplication.translate("DetailWindow", u"Task Details", None))
         self.title_titel.setText(QCoreApplication.translate("DetailWindow", u"Titel:", None))
         self.title_label.setText(QCoreApplication.translate("DetailWindow", u"Task Title", None))
         self.title_apply_button.setText(QCoreApplication.translate("DetailWindow", u"Change", None))
@@ -157,5 +186,6 @@ class Ui_DetailWindow(object):
         self.date_edit.setDisplayFormat(QCoreApplication.translate("DetailWindow", u"dd.MM.yyyy", None))
         self.description_label.setText(QCoreApplication.translate("DetailWindow", u"Description:", None))
         self.back_button.setText(QCoreApplication.translate("DetailWindow", u"Back", None))
+        self.save_button.setText(QCoreApplication.translate("DetailWindow", u"Save", None))
     # retranslateUi
 

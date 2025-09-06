@@ -22,7 +22,7 @@
   <widget class="QWidget" name="main_layout">
    <layout class="QVBoxLayout" name="verticalLayout">
     <item>
-     <widget class="QLabel" name="label">
+     <widget class="QLabel" name="window_title">
       <property name="font">
        <font>
         <bold>true</bold>
@@ -37,24 +37,71 @@
      </widget>
     </item>
     <item>
-     <widget class="QLineEdit" name="task_entry"/>
-    </item>
-    <item>
-     <widget class="QPushButton" name="add_task_button">
-      <property name="text">
-       <string>Add Task</string>
-      </property>
-     </widget>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QLabel" name="label">
+        <property name="text">
+         <string>Sort by:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QComboBox" name="sorting_menu">
+        <property name="editable">
+         <bool>false</bool>
+        </property>
+        <item>
+         <property name="text">
+          <string>Status</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Title</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Due Date</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Orientation::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
     </item>
     <item>
      <widget class="QListWidget" name="task_list"/>
     </item>
     <item>
-     <widget class="QPushButton" name="delete_task_button">
-      <property name="text">
-       <string>Delete Task</string>
-      </property>
-     </widget>
+     <layout class="QHBoxLayout" name="button_layout">
+      <item>
+       <widget class="QPushButton" name="add_task_button">
+        <property name="text">
+         <string>Add Task</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="delete_task_button">
+        <property name="text">
+         <string>Delete Task</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
     </item>
     <item>
      <widget class="QPushButton" name="exit_button">

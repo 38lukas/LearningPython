@@ -3,21 +3,29 @@
 ![License](https://img.shields.io/badge/license-MIT-green)
 ![Build](https://img.shields.io/github/actions/workflow/status/OWNER/REPO/ci.yml?branch=main)
 
-LifeLog is an app, which help you with task management, setting goals for yourself, and feeling like playing a game. 
+**LifeLog** is an app that helps you manage tasks and set goals for yourself.
 
 ---
 
 ## Features
-- **Tasks**:
-  - create/delete tasks
-  - modify status, title, description
-- **Two screens**:
-  - MainWindow → task list
-  - DetailWindow → task detail & editing
-- **Saving & Loading**:
-  - Automatic saving & loading of tasks (CSV file)
-- **Clean structure**:
-  - MVC (Model – View – Controller) + ApplicationManager
+- **Tasks**
+  - Create, edit, and delete tasks
+  - Modify status, title, description, and due date
+  - Automatic validation of empty fields (default values applied)
+  - Sorting by status, title or due date
+- **Screens**
+  - **MainWindow** → Task list, sorting by status, title, or due date
+  - **DetailWindow** → Task details, editing, and saving
+  - **Task Creation Window** → Quickly add new tasks
+- **Persistence**
+  - Automatic saving & loading of tasks (CSV)
+  - Supports simple import/export of tasks
+- **Clean architecture**
+  - MVC (Model–View–Controller) pattern
+  - Central `ApplicationManager` for window and state management
+- **UX improvements**
+  - Info panel showing total tasks and completed tasks
+  - Status color coding in task list for quick visualization
 
 ---
 
@@ -26,6 +34,7 @@ LifeLog is an app, which help you with task management, setting goals for yourse
 - Python 3.13
 - PySide6 (GUI framework)
 - Qt Designer
+- CSV for lightweight persistence
 
 ---
 
@@ -52,26 +61,33 @@ LifeLog is an app, which help you with task management, setting goals for yourse
 
 ## Project Structure
 ```text
-src/
+LifeLog/
+├── .env                          # Virtual environment root
 ├── data/
-│   └── tasks.csv                  # CSV-Datei zur Speicherung der Aufgaben
-├── life_log/
-│   ├── ui/
-│   │   ├── controller/
-│   │   │   ├── detail_window.py
-│   │   │   ├── detail_window_controller.py
-│   │   │   ├── main_window.py
-│   │   │   └── main_window_controller.py
-│   │   └── views/
-│   │       ├── detail_window.ui
-│   │       ├── main_window.ui
-│   │       ├── ui_detail_window.py
-│   │       ├── ui_main_window.py
-│   │       ├── app_manager.py
-│   │       └── __init__.py
-├── app.py                         # Einstiegspunkt der App
-├── model.py                       # Task-Datenmodell
-└── storage.py                     # CSV-Speicherung
+│   └── tasks.csv
+└── src/
+    └── life_log/
+        ├── ui/
+        │   ├── controller/
+        │   │   ├── detail_window.py
+        │   │   ├── detail_window_controller.py
+        │   │   ├── main_window.py
+        │   │   ├── main_window_controller.py
+        │   │   ├── task_creation_window.py
+        │   │   └── task_creation_window_controller.py
+        │   ├── views/
+        │   │   ├── detail_window.ui
+        │   │   ├── main_window.ui
+        │   │   ├── task_creation_window.ui
+        │   │   ├── ui_detail_window.py
+        │   │   ├── ui_main_window.py
+        │   │   └── ui_task_creation_window.py
+        ├   └── app_manager.py
+        ├── __init__.py
+        ├── app.py
+        ├── constants.py
+        ├── model.py
+        └── storage.py
 ```
 
 ---

@@ -1,64 +1,72 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="bab1385e-c485-4d7e-8fd4-8faa346a4963" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../LifeLo/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../LifeLo/data/tasks.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../LifeLo/src/life_log/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../LifeLo/src/life_log/app.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../LifeLo/src/life_log/constants.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../LifeLo/src/life_log/model.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../LifeLo/src/life_log/storage.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../LifeLo/src/life_log/ui/app_manager.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../LifeLo/src/life_log/ui/controller/detail_window.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../LifeLo/src/life_log/ui/controller/detail_window_controller.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../LifeLo/src/life_log/ui/controller/main_window.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../LifeLo/src/life_log/ui/controller/main_window_controller.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../LifeLo/src/life_log/ui/views/detail_window.ui" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../LifeLo/src/life_log/ui/views/main_window.ui" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../LifeLo/src/life_log/ui/views/ui_detail_window.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../LifeLo/src/life_log/ui/views/ui_main_window.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/LifeLog.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/life_log/ui/controller/task_creation_window.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/life_log/ui/controller/task_creation_window_controller.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/tasks.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/tasks.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/life_log/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/life_log/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/life_log/constants.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/life_log/constants.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/life_log/model.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/life_log/model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/life_log/storage.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/life_log/storage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/life_log/ui/app_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/life_log/ui/app_manager.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/life_log/ui/controller/detail_window.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/life_log/ui/controller/detail_window.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/life_log/ui/controller/detail_window_controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/life_log/ui/controller/detail_window_controller.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/life_log/ui/controller/main_window.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/life_log/ui/controller/main_window.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/life_log/ui/controller/main_window_controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/life_log/ui/controller/main_window_controller.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/life_log/ui/views/detail_window.ui" beforeDir="false" afterPath="$PROJECT_DIR$/src/life_log/ui/views/detail_window.ui" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/life_log/ui/views/main_window.ui" beforeDir="false" afterPath="$PROJECT_DIR$/src/life_log/ui/views/main_window.ui" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/life_log/ui/views/ui_detail_window.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/life_log/ui/views/ui_detail_window.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/life_log/ui/views/ui_main_window.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/life_log/ui/views/ui_main_window.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 5
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
   <component name="ProjectId" id="32GrIpnNeaZG2KEGYXbS5fO1bwl" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "Python.app.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "D:/Coding/SoftwareEngineering/Projekte/MaschineLearning/PythonPortfolio/Projects/LifeLog",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Python.app.executor&quot;: &quot;Run&quot;,
+    &quot;Python.app_manager.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Coding/SoftwareEngineering/Projekte/MaschineLearning/PythonPortfolio/Projects/LifeLog&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Coding\SoftwareEngineering\Projekte\MaschineLearning\PythonPortfolio\Projects\LifeLog" />
@@ -79,7 +87,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1757057672510</updated>
-      <workItem from="1757057673578" duration="245000" />
+      <workItem from="1757057673578" duration="637000" />
+      <workItem from="1757137369852" duration="6908000" />
+      <workItem from="1757144687538" duration="2429000" />
     </task>
     <servers />
   </component>
@@ -87,6 +97,7 @@
     <option name="version" value="3" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/LifeLog$app.coverage" NAME="app Coverage Results" MODIFIED="1757057890129" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/life_log" />
+    <SUITE FILE_PATH="coverage/LifeLog$app_manager.coverage" NAME="app_manager Coverage Results" MODIFIED="1757140269025" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/life_log/ui" />
+    <SUITE FILE_PATH="coverage/LifeLog$app.coverage" NAME="app Coverage Results" MODIFIED="1757146676777" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/life_log" />
   </component>
 </project>

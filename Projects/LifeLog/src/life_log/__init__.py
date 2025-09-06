@@ -7,4 +7,6 @@ from src.life_log.ui.controller.main_window import MainWindow
 from src.life_log.ui.controller.detail_window import DetailWindow
 from src.life_log.ui.controller.main_window_controller import MainWindowController
 from src.life_log.ui.controller.detail_window_controller import DetailWindowController
+from src.life_log.ui.controller.task_creation_window import TaskCreationWindow
+from src.life_log.ui.controller.task_creation_window_controller import TaskCreationWindowController
 from src.life_log.ui.app_manager import ApplicationManager

@@ -4,47 +4,49 @@ from datetime import date, datetime
 
 @dataclass
 class Task:
-    """
-    Represents a Task
+    """Represents a task.
 
     Attributes:
-        title (str): The Task title
-        status (str): Status of the Task (In Progress, Pending, Finished)
-        description (str): Description of the task
-        due_date (date): The Date the task is due
+        title (str): The task title.
+        status (str): Status of the task ("Pending", "In Progress", "Finished").
+        description (str): Description of the task.
+        due_date (date): The date the task is due.
     """
     title: str = "No Title"
     status: str = "Pending"
     description: str = "No Description"
     due_date: date = datetime.today().date()
 
+
 def task_to_dict(task: Task) -> dict:
-    """
-    Turns a Task into a dictionary
+    """Convert a Task object into a dictionary suitable for CSV storage.
 
     Args:
-        task (Task): the Task you want to convert
+        task (Task): The Task to convert.
 
     Returns:
-        dict: the dict from the Task
+        dict: Dictionary representation of the Task.
     """
-    return {"title": task.title,
-            "status": task.status,
-            "description": task.description,
-            "due date": task.due_date.strftime('%Y-%m-%d')}
+    return {
+        "title": task.title,
+        "status": task.status,
+        "description": task.description,
+        "due date": task.due_date.strftime('%Y-%m-%d')
+    }
+
 
 def dict_to_task(data: dict) -> Task:
-    """
-    Turns a dictionary into a Task object
+    """Convert a dictionary into a Task object.
 
     Args:
-        dict: the dict from the Task
+        data (dict): Dictionary representation of a task.
 
     Returns:
-        task (Task): the Task you want to convert
+        Task: Task object created from the dictionary.
     """
-    return Task(title=data["title"],
-                status=data["status"],
-                description=data["description"],
-                due_date=datetime.strptime(data["due date"], "%Y-%m-%d").date())
-
+    return Task(
+        title=data["title"],
+        status=data["status"],
+        description=data["description"],
+        due_date=datetime.strptime(data["due date"], "%Y-%m-%d").date()
+    )
